@@ -1,0 +1,73 @@
+﻿ADE;Score([AnzahlxImportance]/No.Panel);Situation;No.PanelMembers;4;3;2;1
+Acute kidney injury;4;outpatient;13;13;0;0;0
+Hypoglycaemia;3,846153846;outpatient;13;11;2;0;0
+SJS/TEN;3,846153846;outpatient;13;11;2;0;0
+Delirium;3,769230769;outpatient;13;10;3;0;0
+Serotonin syndrome;3,769230769;outpatient;13;10;3;0;0
+Anaphylactic shock;3,769230769;outpatient;13;10;3;0;0
+Tachycardia ventricular;3,692307692;outpatient;13;9;4;0;0
+Bleeding outside GIT;3,692307692;outpatient;13;9;4;0;0
+Bleeding upper GIT;3,692307692;outpatient;13;9;4;0;0
+Fall (injuries);3,692307692;outpatient;13;9;4;0;0
+Other allergic skin reactions;3,692307692;outpatient;13;9;4;0;0
+Rhabdomyolysis;3,615384615;outpatient;13;8;5;0;0
+Liber damage;3,615384615;outpatient;13;8;5;0;0
+Angiooedema;3,615384615;outpatient;13;8;5;0;0
+Pseudomembranous colitis;3,461538462;outpatient;13;8;3;2;0
+GI ulcer without bleeding;3,538461538;outpatient;13;7;6;0;0
+Bradycardia;3,461538462;outpatient;13;7;5;1;0
+Hyperkalaemia;3,461538462;outpatient;13;6;7;0;0
+Respiratory depression;3,384615385;outpatient;13;6;6;1;0
+Agranulocytosis and neutropenia;3,384615385;outpatient;13;6;6;1;0
+Syncope and collapse;3,384615385;outpatient;13;5;8;0;0
+Somnolence;3,384615385;outpatient;13;5;8;0;0
+Hypokalaemia;3,384615385;outpatient;13;5;8;0;0
+Extrapyramidal disorders;3,307692308;outpatient;13;5;7;1;0
+Exsiccosis/dehydration;3,307692308;outpatient;13;5;7;1;0
+Anaemia;3,230769231;outpatient;13;4;8;1;0
+Intestinal obstruction (ileus);3,230769231;outpatient;13;3;10;0;0
+Dizziness;3,153846154;outpatient;13;3;9;1;0
+Hallucinations;3,153846154;outpatient;13;3;9;1;0
+Hyponatriaemia;3,153846154;outpatient;13;3;9;1;0
+Disorder of adrenal cortex;3,076923077;outpatient;13;3;8;2;0
+Hypotension;3;outpatient;13;3;7;3;0
+Interstitial lung diseases;3;outpatient;13;3;7;3;0
+Decompensated heart failure;3;outpatient;13;2;9;2;0
+Urinary retention (>= 65 years);2,923076923;outpatient;13;2;8;3;0
+Thrombocytopenia;3;outpatient;13;1;11;1;0
+Uncontrolled hyperglycaemia;2,923076923;outpatient;13;1;10;2;0
+Myopathy;2,846153846;outpatient;13;1;9;3;0
+Rhabdomyolysis;3,818181818;inpatient;11;9;2;0;0
+Acute kidney injury;3,818181818;inpatient;11;9;2;0;0
+Hypoglycaemia;3,727272727;inpatient;11;8;3;0;0
+Acute liver injury;3,727272727;inpatient;11;8;3;0;0
+Anaphylactic shock;3,727272727;inpatient;11;8;3;0;0
+Delirium;3,636363636;inpatient;11;7;4;0;0
+Hyperkalaemia;3,545454545;inpatient;11;7;3;1;0
+Serotonin syndrome;3,363636364;inpatient;11;7;1;3;0
+Bleeding outside GIT;3,545454545;inpatient;11;6;5;0;0
+Agranulocytosis and neutropenia;3,454545455;inpatient;11;6;4;1;0
+SJS/TEN;3,363636364;inpatient;11;6;4;0;1
+Tachycardia ventricular;3,363636364;inpatient;11;6;3;2;0
+Bleeding upper GIT;3,363636364;inpatient;11;6;3;2;0
+Hyponatraemia;3,272727273;inpatient;11;6;2;3;0
+Pseudomembranous colitis;3,363636364;inpatient;11;5;5;1;0
+Fall (excl. fractures);3,272727273;inpatient;11;5;4;2;0
+Hypokalaemia;3,272727273;inpatient;11;5;4;2;0
+Angiooedema;3,272727273;inpatient;11;5;4;2;0
+Extrapyramidal disorders;3,363636364;inpatient;11;4;7;0;0
+Respiratory depression;3,181818182;inpatient;11;4;6;0;1
+Fractures;3,181818182;inpatient;11;4;5;2;0
+Other allergic skin reactions;3,181818182;inpatient;11;4;5;2;0
+Intestinal obstruction (ileus);3,090909091;inpatient;11;4;5;1;1
+Syncope and collapse;3,090909091;inpatient;11;4;4;3;0
+Seizure;3,090909091;inpatient;11;4;4;3;0
+Hypotension;3;inpatient;11;4;4;2;1
+Exsiccosis/dehydration;3;inpatient;11;4;4;2;1
+Toxic damage to inner ear;3,272727273;inpatient;11;3;8;0;0
+Bradycardia;3,181818182;inpatient;11;3;7;1;0
+Thrombocytopenia;3,090909091;inpatient;11;3;6;2;0
+Lactate acidosis;3,090909091;inpatient;11;3;6;2;0
+Uncontrolled hyperglycaemia;3;inpatient;11;3;5;3;0
+Disorder of adrenal cortex;3;inpatient;11;2;7;2;0
+Diarrhoea;2,818181818;inpatient;11;1;7;3;0
