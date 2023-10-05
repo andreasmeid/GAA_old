@@ -95,7 +95,7 @@ xaringanExtra::style_share_again(
 ```
 
 class: title-slide, right, top
-background-image: url(img/ukhd_en.png)
+background-image: url(img/ukhd_en.PNG)
 background-position: 10% 75%, 75% 75%
 background-size: 20%, cover
 
@@ -113,7 +113,7 @@ background-size: 20%, cover
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.PNG)
+background-image: url(img/DrugSymposium_Background.png)
 
 ## Ausgangslage
 
@@ -143,7 +143,7 @@ icon_style(fontawesome("book", style = "solid"), scale = 3.5, fill = "black")
 ---
 # Wissenschaftliches Programm
 
-![:scale 85%](img/WissProgramm.png)
+![:scale 85%](img/WissProgramm.PNG)
 
 
 .footnote[[1] _https://www.gaa-arzneiforschung.de/jahrestagungen/30-jahrestagung-2023, aufgerufen am 28.9.2023_ ] 
@@ -434,7 +434,7 @@ load("timeline_plots.Rdata")
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.PNG)
+background-image: url(img/DrugSymposium_Background.png)
 
 ## 'Neu'-Land 1: stationäre <br /> Risikovorhersage mit <br /> digitalem Patientenkurven
 
@@ -538,7 +538,7 @@ Risikovorhersage zu Zeiten $T_{1}$, $T_{2}$, $T_{n}$ nach stationärer Aufnahme 
 .panelset[
 .panel[.panel-name[Baseline-Prädiktor]
 .pull-left[
-![:scale 75%](img/pred_baseline.PNG)
+![:scale 75%](img/pred_baseline.png)
 ]
 
 .pull-right[
@@ -553,7 +553,7 @@ Beispiel: Trimester-Gewicht in den letzten 9 Monaten (Median aus Drei-Monats-Int
 
 
 .pull-left[
-![:scale 75%](img/pred_rolling.PNG)
+![:scale 75%](img/pred_rolling.png)
 ]
 
 .pull-right[
@@ -567,7 +567,7 @@ Beispiel: Zeitabhängige Definition von *minimalem*, *maximalem* und *letztem* M
 .panel[.panel-name[Growing-Prädiktor]
 
 .pull-left[
-![:scale 75%](img/pred_growing.PNG)
+![:scale 75%](img/pred_growing.png)
 ]
 
 .pull-right[
@@ -581,7 +581,7 @@ Beispiel: Kumulativer Blutverlust seit Aufnahme
 .panel[.panel-name[Zfsg]
 
 
-![:scale 65%](img/pred_all.PNG)
+![:scale 65%](img/pred_all.png)
 <!--.footnote[
 _gp: the grammar of prediction models_
 ]-->
@@ -810,7 +810,7 @@ model_data %>% filter(time <=150) %>%
 
 .panel[.panel-name[Datenbank]
 
-![:scale 300%](img/kurve2.png)
+![:scale 300%](img/kurve2.PNG)
 
 ]
 
@@ -862,7 +862,7 @@ model_data %>% filter(time <=150) %>%
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.PNG)
+background-image: url(img/DrugSymposium_Background.png)
 
 ## 'Neu'-Land 2: ambulante <br /> Risikomodelle (inkl. <br /> digitale Patientenakten)
 
@@ -943,7 +943,7 @@ p
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.PNG)
+background-image: url(img/DrugSymposium_Background.png)
 
 ## Fallstricke
 
@@ -957,13 +957,13 @@ background-image: url(img/DrugSymposium_Background.PNG)
 
 .pull-left[
 
-    ![:scale 40%](img/symposium.png)
+    ![:scale 40%](img/symposium.PNG)
     
   ]
   
 .pull-right[
 
-  ![:scale 100%](img/symposium2.png)
+  ![:scale 100%](img/symposium2.PNG)
     
   ]
 
@@ -1072,7 +1072,7 @@ Also visit this page .link-style2[[wikipedia](https://en.wikipedia.org/wiki/Main
 
 ---
 class: body-yellow
-background-image: url(img/background06.PNG)
+background-image: url(img/background06.png)
 
 ## AusblicK & <br /> Diskussion 
 
