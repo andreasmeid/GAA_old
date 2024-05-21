@@ -38,13 +38,13 @@
 
 
 class: title-slide, right, top
-background-image: url(img/ukhd_en.PNG)
+background-image: url(img/ukhd_en.png)
 background-position: 10% 75%, 75% 75%
 background-size: 20%, cover
 
 .right-column[
 # Arzneimittel-Risikomanagement
-### _Neue Perspektiven für Modelle_
+### _Modelle für Prognose und Vermeidung_
 
 **PD Dr. sc. hum. Andreas D. Meid**&lt;br&gt;
 &lt;br&gt;
@@ -56,24 +56,22 @@ GAA Jahrestagung 2023
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.png)
+background-image: url(img/DrugSymposium_Background.PNG)
 
 ## Ausgangslage
 
 
 
 
-![:scale 65%](img/Population.png)
+&lt;!-- ![:scale 65%](img/Population.png) --&gt;
 
 
 
 
 ---
-exclude:true
-      
 # Wissenschaftliches Programm
 
-![:scale 85%](img/WissProgramm.PNG)
+![:scale 85%](img/WissProgramm.png)
 
 
 .footnote[[1] _https://www.gaa-arzneiforschung.de/jahrestagungen/30-jahrestagung-2023, aufgerufen am 28.9.2023_ ] 
@@ -88,31 +86,21 @@ exclude:true
 .panelset[
 .panel[.panel-name[Auktoriale Sicht]
 
-![:scale 100%](img/Part_A.png)
+
 
 
 ]
 
 .panel[.panel-name[Forscher-Sicht]
 
-![:scale 100%](img/Part_B.png)
+
 
 ]
 
-.panel[.panel-name[Neue Perspektive 1]
 
-![:scale 100%](img/Part_C.png)
 
 ]
 
-.panel[.panel-name[Neue Perspektive 2]
-
-
-![:scale 100%](img/Part_D.png)
-
-]
-
-]
 
 
 
@@ -120,536 +108,10 @@ exclude:true
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.png)
-
-## 'Neu'-Land 1: stationäre &lt;br /&gt; Risikovorhersage mit &lt;br /&gt; digitalem Patientenkurven
-
-![:scale 50%](img/Part_C.png)
-
----
-# Was will man (stationär) vorhersagen?
-
-
-
-&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="89%" style="display: block; margin: auto;" /&gt;
-
-.footnote[[2] _modifiziert aus Haerdtlein A et al. J Clin Med 2022;11: Der relative Score berechnet sich aus dem Votum * Importance (1-4) durch die Gesamtanzahl der Panelmitglieder (damit stationär und ambulant vergleichbar sind) _ ] 
-
-
----
-
-# **G**rammar of **p**rediction **models**
-
-Risikovorhersage zu Zeiten `\(T_{1}\)`, `\(T_{2}\)`, `\(T_{n}\)` nach stationärer Aufnahme (Zeitpunkt `\(T_{0}\)`)
-
-
-.panelset[
-.panel[.panel-name[Baseline-Prädiktor]
-.pull-left[
-![:scale 75%](img/pred_baseline.png)
-]
-
-.pull-right[
-
-Beispiel: Trimester-Gewicht in den letzten 9 Monaten (Median aus Drei-Monats-Intervallen)
-
-]
-
-]
-
-.panel[.panel-name[Rolling-Prädiktor]
-
-
-.pull-left[
-![:scale 75%](img/pred_rolling.png)
-]
-
-.pull-right[
-
-Beispiel: Zeitabhängige Definition von *minimalem*, *maximalem* und *letztem* Messwert zum systolischen Blutdruck über die letzten sechs Stunden
-
-]
-
-]
-
-.panel[.panel-name[Growing-Prädiktor]
-
-.pull-left[
-![:scale 75%](img/pred_growing.png)
-]
-
-.pull-right[
-
-Beispiel: Kumulativer Blutverlust seit Aufnahme
-
-]
-
-]
-
-.panel[.panel-name[Zfsg]
-
-
-![:scale 65%](img/pred_all.png)
-&lt;!--.footnote[
-_gp: the grammar of prediction models_
-]--&gt;
-
-
-]
-
-]
-
-
-
----
-exclude:true
-# EHR-Beispieldaten
-
-
-
-
-.panelset[
-.panel[.panel-name[Zeit-konstant]
-
-
-```
-##   id    sex      age  race baseline_cr          admit_time             dc_time
-## 1  1   male 66.15955 asian   1.0011752 2019-06-02 00:49:23 2019-06-08 10:38:23
-## 2  2 female 60.54697 white   0.7166654 2019-06-07 14:12:21 2019-06-13 18:31:21
-## 3  3   male 47.25137 white   0.9207885 2019-08-29 12:47:56 2019-08-30 23:56:56
-## 4  4   male 65.16939 black   1.1288818 2019-03-13 21:24:14 2019-03-15 23:39:14
-## 5  5 female 79.87402 other   0.9292875 2019-02-11 02:46:16 2019-02-15 01:35:16
-## 6  6   male 88.90951 asian   1.0568886 2019-09-15 20:38:50 2019-09-17 03:58:50
-```
-
-]
-
-.panel[.panel-name[Zeit-variabel]
-
-
-```
-##   id                time variable            value category
-## 1  1 2019-06-01 15:46:23       cr 1.03009770619414      lab
-## 2  1 2019-06-01 15:46:23  cr_abnl           normal     flag
-## 3  1 2019-06-01 15:46:23  cr_high               no     flag
-## 4  1 2019-06-01 22:21:23       cr 1.00365873019769      lab
-## 5  1 2019-06-01 22:21:23  cr_abnl           normal     flag
-## 6  1 2019-06-01 22:21:23  cr_high               no     flag
-```
-
-]
-
-.panel[.panel-name[Umfang]
-
-
-```
-##  [1] "fixed_data"         "temporal_data"      "fixed_id"           "fixed_start"        "fixed_end"          "temporal_id"       
-##  [7] "temporal_time"      "temporal_variable"  "temporal_value"     "temporal_category"  "step"               "max_length"        
-## [13] "step_units"         "output_folder"      "fixed_data_dict"    "temporal_data_dict" "chunk_size"
-```
-
-]
-
-.panel[.panel-name[Analysis set]
-
-
-```
-##   id time  sex      age baseline_cr growing_cr_max cr_max_06 outcome_cr_max_24
-## 1  1    0 male 66.15955    1.001175             NA  1.003659          1.217020
-## 2  1    6 male 66.15955    1.001175             NA  1.003659          1.217020
-## 3  1   12 male 66.15955    1.001175       1.039322  1.039322          1.217020
-## 4  1   18 male 66.15955    1.001175       1.217020  1.217020          1.179722
-## 5  1   24 male 66.15955    1.001175       1.217020  1.179722          1.274939
-## 6  1   30 male 66.15955    1.001175       1.217020  1.165989          1.274939
-```
-
-]
-
-]
-
-
----
-exclude:true
-# Voraussetzungen
-
-&gt; Longitudinale Daten: Wiederholte Messungen bei Patienten 
-
-&gt; Verfahren müssen mit folgendem umgehen können:
-
-- fehlende Werte &amp;#9989; &lt;br&gt; &lt;br&gt;
-
-- verschiedene Kovarianz-Strukturen (u.a. auto-regressive Abhängigkeiten) &amp;#9989; &lt;br&gt; &lt;br&gt;
-
-- nicht-lineare Zusammenhänge? &lt;br&gt; &lt;br&gt;
-
-
-
----
-exclude:true
-
-# Zurück zu (Beispiel-) EHR
-
-
-.panelset[
-
-.panel[.panel-name[lme]
-
-
-```r
-lmer_mod &lt;- lmer(outcome_cr_max_24 ~ time + age + baseline_cr + 
-                      growing_cr_max + cr_max_12 + sex +  med_aspirin_sum_168 + 
-                      med_acetaminophen_sum_168 + med_diphenhydramine_sum_168 + (1 + time | id),
-                    data = model_data)
-```
-mit: &lt;br&gt;
-`outcome_cr_max_24`= max. Crea in nächsten 24h (Outcome)  &lt;br&gt;
-`baseline_cr`= Ausgangswert (*baseline*) &lt;br&gt;
-`growing_cr_max`=  cumulative max creatinine since admission (*growing*) &lt;br&gt;
-`cr_max_12`= max. Crea in letzten 12h (*rolling*) &lt;br&gt;
-`med_[x]`= kumulierte Verordnungen (*growing*)
-
-]
-
-.panel[.panel-name[gam]
-
-Dem *lme* äquivalentes GAM-Modell:
-
-
-```r
-gam_mod &lt;- gamm4(outcome_cr_max_24~time + age + baseline_cr + 
-                      growing_cr_max + cr_max_12 + sex + med_aspirin_sum_168 + 
-                      med_acetaminophen_sum_168 + med_diphenhydramine_sum_168, family=gaussian,
-           data=model_data, random = ~ (1+time|id))
-```
-
-]
-
-.panel[.panel-name[lme summary]
-
-
-```
-##                                  Estimate   Std. Error    t value
-## (Intercept)                  0.1151930866 0.0403776284  2.8528938
-## time                         0.0003962126 0.0002447868  1.6186028
-## age                          0.0003926907 0.0003367668  1.1660611
-## baseline_cr                  1.3673089943 0.0578479584 23.6362533
-## growing_cr_max              -0.3648598429 0.0367735036 -9.9218135
-## cr_max_12                   -0.0389921710 0.0169731783 -2.2972817
-## sexmale                      0.1744112004 0.0145252968 12.0074105
-## med_aspirin_sum_168          0.0034008304 0.0046534189  0.7308241
-## med_acetaminophen_sum_168   -0.0052233121 0.0045604992 -1.1453378
-## med_diphenhydramine_sum_168  0.0046332815 0.0048348129  0.9583166
-```
-
-]
-
-.panel[.panel-name[gam summary]
-
-
-```
-##                                  Estimate    Std_Error    t_value p_value
-## (Intercept)                  0.1151930866 0.0403776284  2.8528938 0.00440
-## time                         0.0003962126 0.0002447868  1.6186028 0.10579
-## age                          0.0003926907 0.0003367668  1.1660611 0.24382
-## baseline_cr                  1.3673089943 0.0578479584 23.6362533 0.00000
-## growing_cr_max              -0.3648598429 0.0367735036 -9.9218135 0.00000
-## cr_max_12                   -0.0389921710 0.0169731783 -2.2972817 0.02177
-## sexmale                      0.1744112004 0.0145252968 12.0074105 0.00000
-## med_aspirin_sum_168          0.0034008304 0.0046534189  0.7308241 0.46503
-## med_acetaminophen_sum_168   -0.0052233121 0.0045604992 -1.1453378 0.25229
-## med_diphenhydramine_sum_168  0.0046332815 0.0048348129  0.9583166 0.33809
-```
-
-]
-
-
-.panel[.panel-name[splines]
-
-
-```r
-gam_mod_spline &lt;- gamm4(outcome_cr_max_24~time + age + baseline_cr + 
-                      s(growing_cr_max) + s(cr_max_12) + sex + med_aspirin_sum_168 + 
-                      med_acetaminophen_sum_168 + med_diphenhydramine_sum_168, family=gaussian,
-           data=model_data, random = ~ (1+time|id))
-```
-
-Spline effects:
-
-```
-##                       edf  Ref.df        F p-value
-## s(growing_cr_max) 1.17312 1.17312 79.50603 0.00000
-## s(cr_max_12)      4.60078 4.60078  1.67541 0.11618
-```
-
-]
-
-&lt;!--.panel[.panel-name[spline summary]
-
-Fixed effects:
-
-
-```
-##                                  Estimate    Std_Error   t_value p_value
-## (Intercept)                 -0.3132026510 0.0555617176 -5.637022 0.00000
-## time                         0.0003880457 0.0002427033  1.598848 0.11011
-## age                          0.0004026810 0.0003277040  1.228795 0.21938
-## baseline_cr                  1.3554983993 0.0569807415 23.788711 0.00000
-## sexmale                      0.1725960751 0.0143068840 12.063848 0.00000
-## med_aspirin_sum_168          0.0034417563 0.0046608854  0.738434 0.46039
-## med_acetaminophen_sum_168   -0.0053590488 0.0045754417 -1.171264 0.24172
-## med_diphenhydramine_sum_168  0.0042053717 0.0048411559  0.868671 0.38520
-```
-
-Spline effects:
-
-```
-##                       edf  Ref.df        F p-value
-## s(growing_cr_max) 1.17312 1.17312 79.50603 0.00000
-## s(cr_max_12)      4.60078 4.60078  1.67541 0.11618
-```
-
-
-
-
-]--&gt;
-
-
-]
-
----
-# Die digitale Kurve am UKHD
-
-.panelset[
-.panel[.panel-name[Medikation]
-
-
-![:scale 600%](img/kurve3.png)
-
-
-]
-
-.panel[.panel-name[Nutzeransicht]
-
-
-![:scale 80%](img/kurve4.png)
-
-
-]
-
-.panel[.panel-name[Datenbank]
-
-![:scale 300%](img/kurve2.PNG)
-
-]
-
-.panel[.panel-name[Datenumfang]
-
-![:scale 65%](img/UKHD_data.png)
-.footnote[[3] _Scherkl et al., unpublished data_ ] 
-
-
-]
-
-]
-
----
-# Prescribing Monitoring
-
-&lt;!-- 
-![:scale 90%](img/PrescribingMonitoring1.png) &lt;br /&gt; 
---&gt;
-
-&gt; '*Modellbasierte Entscheidungsunterstützung durch Nutzung einer digitalen Kurve, wobei arzneimittel-assoziierte Risiken beim Verschreibungsprozess berücksichtigt, währenddessen überwacht und gegebenenfalls bewarnt werden*'
-
---
-
-&gt; Die Situationen können sich auf das 
-+ Risiko eines unerwünschten Ereignisses, 
-+ eines Biomarkers oder 
-+ einer Arzneimittelexposition 
-
-&gt; beziehen. 
-
---
-
-&gt; Risiken oder künftige Beobachtungen für diese Situationen müssen 
-+ individuell unter Berücksichtigung bestimmter Patientenmerkmale vorhergesagt werden, 
-+ longitudinal über einen künftigen Zeitraum vorhergesagt werden und 
-+ dynamisch vorhergesagt werden.
-
-
-.footnote[[4] _Scherkl et al., unpublished data_ ] 
-
----
-# Pilotanalyse
-
-
-![:scale 90%](img/PrescribingMonitoring.png)
-.footnote[[5] _Meid et al., unpublished data_ ] 
-
-
----
-class: body-yellow
-background-image: url(img/DrugSymposium_Background.png)
-
-## 'Neu'-Land 2: ambulante &lt;br /&gt; Risikomodelle (inkl. &lt;br /&gt; digitale Patientenakten)
-
-![:scale 50%](img/Part_D.png)
-
----
-# Risiken im ambulanten Bereich
-
-
-&lt;img src="index_files/figure-html/unnamed-chunk-11-1.png" width="89%" height="100%" style="display: block; margin: auto;" /&gt;
-
-.footnote[[6] _modifiziert aus Haerdtlein A et al. J Clin Med 2022;11: Der relative Score berechnet sich aus dem Votum * Importance (1-4) durch die Gesamtanzahl der Panelmitglieder (damit stationär und ambulant vergleichbar sind) _ ] 
-
-
----
-# Ein Pilot-Projekt als Blaupause?
-
-
-![:scale 87%](img/HIC.png) &lt;br /&gt; 
-.footnote[[7] _https://www.dundee.ac.uk/hic/safe-haven_ &lt;br /&gt; [8] _Scherkl et al., unpublished data._ ] 
-
-
----
-class: body-yellow
-background-image: url(img/DrugSymposium_Background.png)
-
-## Fallstricke
-
-![:scale 65%](img/Population.png)
-
-
----
-# 7 Herausforderungen für Prädiktionsmodelle aus Routinedaten
-
-
-
-.pull-left[
-
-    ![:scale 40%](img/symposium.PNG)
-    
-  ]
-  
-.pull-right[
-
-  ![:scale 100%](img/symposium2.PNG)
-    
-  ]
-
-
-
-
-.footnote[[9] _https://andreasmeid.github.io/ADR_Prediction/, aufgerufen am 28.9.2023_ ] 
-
-
----
-
-# *Dataset shift* ist ein ernstes Problem
-
-![:scale 250%](img/dataset_shift.png)
-
-.footnote[[10] _Finlayson SG et al. N Engl J Med 2021;385:283-286._]
-
-
-
----
-exclude:true
-# Mittelfristige Fragestellungen in Pilot-Daten (und Echt-Zeit-Daten?)
-
-- Wie erkennt man durch (dynamische / longitudinale) EHR-Daten medikations-assoziierte Risiken für/mit bspw.
-
- - (Laborwert-) Surrogate: Kreatinine, Kalium, ...
- 
- - Mortalität (während Aufenthalt und/oder danach) oder
- 
- - eine längere Verweildauer oder
- 
- - Nierenversagen oder
- 
- - Rehospitalisierungen oder
- 
- - Verlegung auf Intensivstation?
-
-
----
-# Danke an ...
-
-
-&lt;style type="text/css"&gt;
-.link-style1 a {
-  color: blue;
-  text-decoration: underline;
-}
-
-.link-style2 a {
- color: blue;
-}
-
-&lt;/style&gt;
-
-&lt;!-- 
-E-mail: .link-style1[[example@gmail.com](mailto:example@gmail.com)]
-Also visit this page .link-style2[[wikipedia](https://en.wikipedia.org/wiki/Main_Page)]
-
---&gt;
-
-.pull-left[
-
-.pull-left-wide[
-+ Bereich *Pharmakoepidemiologie* am UKHD
-
-
-|            | Weitere Schwerpunkte     | 
-|------------------|------------------|
-| .link-style2[[Andreas Meid](https://andreas-d-meid.netlify.app/)]    | Pharmakometrie, Biometrie |
-| Camilo Scherkl     | EHR-Daten, CDSS  | 
-| Ignacio Leiva-Escobar | RCT-Daten, *Data Science* |
-    
-+ Expertengruppe *Prescribing Monitoring*, hier zusätzlich
-
-  + Hanna Seidling
-  + David Czock
-  + Michael Metzner 
-
-  ]
-  ]
-  
-.pull-right[
-
-+ Prof. Dr. Tobias Dreischulte und Arbeitsgruppe, *LMU Institut für Allgemeinmedizin*
-
-+ *health informatics centre (hic)*, University of Dundee
-
-******
-
-
-+ Abteilung .link-style2[[*Klinische Pharmakologie und Pharmakoepidemiologie*](https://www.klinikum.uni-heidelberg.de/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/abt-klinische-pharmakologie-und-pharmakoepidemiologie)] 
-
-+ *Zentrum für Digitalisierung und Informationstechnologie* (ZDI)
-
-+ ...
-
-&lt;!-- 
-.center[![:scale 60%](img/PrescribingMonitoringLogo.png)]
---&gt;
-
-   
-]
-
-
-
-
----
-class: body-yellow
-background-image: url(img/background06.png)
+background-image: url(img/background06.PNG)
 
 ## AusblicK &amp; &lt;br /&gt; Diskussion 
 
-Mögliche Interessenskonflikte: Keine
-      
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -700,19 +162,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
