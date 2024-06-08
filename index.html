@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Arzneimittel-Risikomanagement</title>
+    <title>Perspective on  Model-Informed  Drug Development (MIDD)</title>
     <meta charset="utf-8" />
     <meta name="author" content="PD Dr. sc. hum. Andreas D. Meid" />
+    <meta name="date" content="2024-06-12" />
     <script src="index_files/header-attrs/header-attrs.js"></script>
     <link href="index_files/remark-css/default.css" rel="stylesheet" />
     <meta name="description" content="Test"/>
@@ -43,22 +44,85 @@ background-position: 10% 75%, 75% 75%
 background-size: 20%, cover
 
 .right-column[
-# Arzneimittel-Risikomanagement
-### _Modelle für Prognose und Vermeidung_
+# Perspective on &lt;br /&gt;Model-Informed &lt;br /&gt;Drug Development (MIDD)
+### _The mission, two examples, one vision_
 
 **PD Dr. sc. hum. Andreas D. Meid**&lt;br&gt;
 &lt;br&gt;
-Clinical Pharmacology and Pharmacoepidemiology &lt;br /&gt; Heidelberg University Hospital &lt;br&gt;&lt;br&gt;
-GAA Jahrestagung 2023
+Clinical Pharmacology and Pharmacoepidemiology &lt;br /&gt; Heidelberg University Hospital &lt;br&gt; &lt;br&gt;
+2024-06-12
 ]
 
+---
+# Outline
 
++ Introduction
+  + Presentation of myself
+  + The mission of MIDD
+
++ Own example cases
+  1. Pragmatic dosing recommendations for atorvastatin while treated with ritonavir
+  2. Translational modeling of T-DM1
+
++ A vision for the future of MIDD
+
++ Outlook &amp; Discussion
 
 ---
 class: body-yellow
-background-image: url(img/DrugSymposium_Background.png)
+background-image: url(img/DrugSymposium_Background.PNG)
 
-## Ausgangslage
+## Who I am and &lt;br /&gt; where I would like &lt;br /&gt; to go professionally
+
+
+---
+
+
+&lt;style type="text/css"&gt;
+.link-style1 a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.link-style2 a {
+ color: blue;
+}
+
+&lt;/style&gt;
+
+# Formal biosketch
+
+&gt; Training
+  + Pharmacist and Biometrician / Biostatistician
+  + Master thesis at Merck Serono (Clinical Pharmacokinetics)
+  + Doctorate in Pharmacoepidemiology (PhEpi) at Heidelberg University Hospital
+  + Habilitation in Clinical Pharmacology and PhEpi at Heidelberg University
+  
+&gt; Work experience
+  + Group leader at Heidelberg Clinical Pharmacology &amp; Pharmacoepi [1]
+  + Biometric and PMx support of IITs
+  + Pharmacological counselling support (model-based TDM) 
+  + ...
+  + Research focus [1,2]: Model-informed decision making with RWE and PmX
+
+.footnote[[1] .link-style2[[Heidelberg University Hospital (UKHD) Homepage ](https://www.klinikum.uni-heidelberg.de/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/abt-klinische-pharmakologie-und-pharmakoepidemiologie/phepi)] &lt;br /&gt;
+[2] .link-style2[[Netlify Research Profile](https://andreas-d-meid.netlify.app/)]
+] 
+
+
+---
+# 'Quantitative Pharmacologist' - current role
+
+&lt;img src="index_files/figure-html/current_role-1.png" width="89%" style="display: block; margin: auto;" /&gt;
+---
+# Where could this role lead professionally?
+
+&lt;img src="index_files/figure-html/future_role-1.png" width="89%" style="display: block; margin: auto;" /&gt;
+---
+class: body-yellow
+background-image: url(img/background04.png)
+
+## Model-informed &lt;br /&gt; drug development (MIDD): &lt;br /&gt; &lt;br /&gt; The mission  &lt;br /&gt; back then and now
 
 
 
@@ -66,49 +130,651 @@ background-image: url(img/DrugSymposium_Background.png)
 &lt;!-- ![:scale 65%](img/Population.png) --&gt;
 
 
+---
+# The MIDD mission ...
+
+- In **2012**: _"Mission: model-based translational research_ [...] 
+  + _for better informed drug development and_ [...]
+  + _for better ways to de-risk molecules, shorten cycle times, reduce attrition, improve productivity and bring value to patients"_ [3]
+
+- In **2021**: _"[a] process intended to expedite drug development, enhance regulatory science, and produce benefits for patients"_ [4]
+
+- ... with a MIDD toolbox including both bottom-up mechanistic modeling and top-down data-driven approaches &lt;!--  [CPTPharmacometricsSystPharmacol18_7_617_Trame_29761892, CPTPharmacometricsSystPharmacol19_8_331_vanderGraaf_30506856] --&gt; 
+  + population pharmacokinetics (PopPK),
+  + exposure–response,
+  + physiologically based pharmacokinetic (PBPK) analysis, 
+  + [QSP modeling], ...
+
+  
+.footnote[[3] _Lesko LJ. Personal presentation at Merck Serono. 2012-07-26._  &lt;br /&gt;  [4] _Lesko LJ. Perspective on model-informed drug development. CPT Pharmacometrics Syst Pharmacol 2021;10:1127-1129._ ] 
+
+---
+# Mechanistic versus empirical projects 
+
+|            | Mechanistic (QSP) Modeling [5]   |  Empirical Pharmacometrics (PMx)  |
+|----------|------------------|------------------|
+| Premise    | All empirical observations (biological and clinical) are connected at a multiscale level | There is an optimal system of equations that can fit to and describe empirical observations |
+| Motivation | Target-centric or disease-centric | Drug-centric |
+| Pipeline phase | Target ID to Life Cycle Management | Lead Optimization to Life Cycle Management |
+| Trigger | Strategic decision or question for the project team | Clinical data availability |
+| Timelines | Months | Weeks |
+| Context of use | Flexible / Adaptable extrapolation | Limited / Restricted extrapolation |
+| Input data | 	In-vitro and clinical (rarely in-vivo) | Clinical/In-vivo (occasionally in-vitro) |
+| Validation| Unusual for Discovery, and likely for Clinical Development / Prior to decision-making | Unusual / Post-decision making |
+
+.footnote[[5] _Cucurull-Sanchez L. J Pharmacokinet Pharmacodyn 2024._ ] 
+
+---
+exclude:true
+# MIDD application
+
+
+![:scale 85%](img/Galuppi.PNG)
+
+Galluppi GR et al. Clin Pharmacol Ther 2021;110:1172-1175.
+
+
+The primary objective of early drug development, with limited data to define the therapeutic index, is to identify the safe dose and understand the mechanism of action (MoA) and other properties (e.g., modality, PK, PD, etc.) of the novel molecule. Information from preclinical models and the same modality or class of drugs can be leveraged to potentially help fill in where clinical data are lacking. As illustrated in the asciminib case, target asciminib concentrations used for dose optimization were identified using tumor cell lines and xenograft models.[SCEMBLIX (asciminib) Drug Approval Package. 2021 https://www.accessdata.fda.gov/drugsatfda_docs/nda/2021/215358Orig1s000,Orig2s000TOC.cfm]
+
+
+During phase I/II expansion and proof-of-concept stage, important questions include: clinical anti-tumor activity and safety/tolerability profile in the targeted patient population(s) and dose(s) to be taken forward for confirmatory trials. This is the most critical stage for data generation to inform dose selection, with adequate sample size and treatment duration, and ideally more than one dose level evaluated with a sufficient number of subjects. Notably, dose-expansion trials, which aim to compare different dosages, are typically not designed to provide primary evidence of safety and efficacy for future regulatory approval. In such trials, which strive to further refine dose optimization, the stringent control of type I error may not be essential, given that the trial's main objective is not to definitively establish effectiveness. Additionally, when more than two dosages are under consideration, the design does not necessarily mandate the power to detect pairwise comparisons of a meaningful dose
+
+In general, collecting data from multiple dose levels, prior to the confirmatory trials, is critical to characterizing the dose/E–R relationships both for efficacy and safety, and to informing dose optimization.1 The FDA Draft Guidance recommends use of randomized, parallel dose–response trial for comparison of multiple dosages.[FDA] The purpose of these trials is not to demonstrate statistical superiority of one dosage. Rather, it is important that the trial sample size is adequate for assessment of activity, safety, and tolerability for more than one dosage. Additionally, collection of long-term safety and tolerability data is integral to understand the potential for late onset toxicity and the impact of low-grade toxicity, throughout the clinical development process, beginning in the early phases of development, to ensure the proper characterization of the safety and tolerability profile of the drug.
+
+---
+exclude:true
+# MIDD techniques
+
+![:scale 95%](img/Allen_Moore.PNG)
+
+.footnote[[Ref] _Allen &amp; Moore. Bull Math Biol 2019;81:3425-3435._ ] 
+
+---
+exclude:true
+
+# Tools
+
+Different concepts: 
+top-down estimation &amp; bottom-up prediction, 
+mechanistic / semi-mechanistic / empirical, …
 
 
 ---
-# Wissenschaftliches Programm
+class: body-yellow
+background-image: url(img/background03.PNG)
 
+# Use-Case 1: Empirical / &lt;br /&gt; (semi-mechanistic) model &lt;br /&gt; to guide dosing of &lt;br /&gt; atorvastatin &lt;br /&gt; when co-administered &lt;br /&gt; with ritonavir
 
-.footnote[[1] _https://www.gaa-arzneiforschung.de/jahrestagungen/30-jahrestagung-2023, aufgerufen am 28.9.2023_ ] 
 
 ---
 
-# Eine Reise für PatientInnen ... 
+# Background
+
+
+.panelset[
+.panel[.panel-name[Rationale]
+
+- **Ritonavir** (as in combination with nirmatrelvir to treat SARS-CoV-2-infected patients) is expected to increase pharmacokinetic exposure to atorvastatin when co-administered in usually chronically ill patients susceptible to atorvastatin-mediated adverse drug reactions [6]
+- **Ritonavir** primarily and irreversibly inhibits CYP enzymes (primarily CYP3A4 [7]), and also inhibits hepatic uptake transporters (OATP) and efflux transporters (e.g., P-glycoprotein) [8].
+&lt;!--  In addition, it induces CYP1A2, CYP2B6, CYP2C9, and CYP2C19 [8]. The net sum of the effect within the first 5 days remains unclear but is likely dominated by rapid inhibition [9], while treatment appears to be too short for induction of CYP3A albeit possibly not for all CYP isozymes [10]. --&gt;
+- **Atorvastatin** is mainly metabolized by CYP3A4 to form its two active metabolites 2-hydroxy atorvastatin and 4-hydroxy atorvastatin [9]. Above, inhibition of hepatic uptake transporters such as several OATPs or the efflux transporter BCRP can also increase systemic exposure and the risk of adverse events [10].
+
+]
+
+.panel[.panel-name[Prior knowledge]
+
+CYP3A4 enzyme activity as determined by midzolam marker [6]
+
+![:scale 50%](img/MDZ_together.png)
+
+]
+
+.panel[.panel-name[Study Design]
+
+N = 8
+
+![:scale 85%](img/StudyDesign.PNG)
+
+]
+
+]
+
+.footnote[[6] _Krohmer E et al. Cardiovasc Drugs Ther. 2024 (in press)._  &lt;br /&gt;  [7] _Eichbaum C et al. Eur J Clin Pharmacol 2013;69:1795-800._ &lt;br /&gt;  [8] _Kis O et al. Trends Pharmacol Sci 2010;31:22-35._ &lt;br /&gt;  [9] _Lennernäs H. Clin Pharmacokinet 2003;42:1141-60._ &lt;br /&gt;  [10] _Hua WJ et al. Cardiovasc Ther 2012;30:e234-41._] 
+
+
+---
+
+
+# Modeling approach
+
+.panelset[
+
+.panel[.panel-name[Structural model]
+
+![:scale 85%](img/ATV_model.PNG)
+
+&lt;!-- AaAtor: amount in absorption compartment; 
+Ac and At: amount in central and peripheral compartments; 
+Acyp0 and Acypgut0: relative activity of hepatic and  intestinal CYP-enzyme before intervention (set at 1); 
+Acyp and Acypgut: relative activity of hepatic and intestinal CYP-enzyme (initial values set at 1); 
+Cc: plasma concentration; 
+CLd/F, apparent distribution clearance; 
+CL/F, apparent clearance after oral administration; 
+kdeg: 1st-order degradation rate constant; 
+kin,Ator: zero-order absorption rate constant; 
+kin,cyp: hepatic/ intestinal CYP synthesis rate; 
+RTVeffect: ritonavir-induced relative change of CYP activity after a ritonavir dose as used to modify drug elimination; 
+RTVeffect,gut: ritonavir-induced relative change of CYP activity after a ritonavir dose used to modify bioavailability; RTVeffect,tabs: ritonavir-induced relative change of zero-order absorption time; tabs: zero-order absorption time; 
+Vc/F: apparent volume of the central compartment 
+Vt/F: apparent volume of peripheral compartment. --&gt;
+
+
+
+]
+
+
+.panel[.panel-name[Course of action]
+
+- **Structural model**
+  + Two-compartment PK model with zero-order absorption (and lag time) developed considering atorvastatin concentrations without ritonavir
+  + Turn-over model for hepatic and gastro-intestinal CYP activity to estimate systemic clearance and bioavailability of atorvastatin during ritonavir [11]
+- **Parameter estimation**
+  + NLME estimation with the *nlmixr2 R package* using the first order–conditional estimation with interaction (FOCEI) algorithm
+  + Inter-individual variability (IIV) for relative bioavailability, apparent systemic clearance, and apparent central volume of distribution
+- **Model diagnostics**
+  + Visual goodness-of-fit inspection, 
+  + Likelihood-based objective function values
+- **Simulation** of alternative dosing scenarios with the *rxode2 R package* 
+
+
+
+]
+]
+.footnote[[11] _Yadav J et al. Mol Pharm 2018;15:1979-1995_] 
+
+---
+# Results
+
+
+.panelset[
+
+.panel[.panel-name[Model fits]
+
+
+
+
+
+&lt;select id="plot-selector-1" style="margin-top: 20px;"&gt;
+  &lt;option value="plot1" selected&gt;Fits for individuals&lt;/option&gt;
+  &lt;option value="plot2"&gt;Fits to group means&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;div id="plot-container-1"&gt;
+  &lt;div id="plot1" class="plot"&gt;
+    &lt;img src="index_files/figure-html/Ind_plot-1.png" width="1200px" height="480px" style="display: block; margin: auto;" /&gt;
+  &lt;/div&gt;
+  &lt;div id="plot2" class="plot" style="display: none;"&gt;
+    &lt;img src="index_files/figure-html/Pop_plot-1.png" width="1200px" height="400px" style="display: block; margin: auto;" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+document.getElementById("plot-selector-1").addEventListener("change", function() {
+  var selectedPlot = this.value;
+  var plots = document.querySelectorAll("#plot-container-1 .plot");
+  plots.forEach(function(plot) {
+    plot.style.display = "none";
+  });
+  document.getElementById(selectedPlot).style.display = "block";
+});
+
+// Ensure the correct plot is displayed on load for Tab 1
+window.onload = function() {
+  var selectedPlot = document.getElementById("plot-selector-1").value;
+  document.getElementById(selectedPlot).style.display = "block";
+};
+&lt;/script&gt;
+
+
+
+]
+
+
+.panel[.panel-name[Diagnostics]
+
+![:scale 80%](img/ATV_diagnostics.PNG)
+
+]
+
+
+.panel[.panel-name[Simulation]
+
+
+
+
+
+&lt;select id="plot-selector-2" style="margin-top: 20px;"&gt;
+  &lt;option value="plot3" selected&gt;Simulated population mean&lt;/option&gt;
+  &lt;option value="plot4"&gt;Simulated IIV&lt;/option&gt;
+&lt;/select&gt;
+&lt;div id="plot-container-2"&gt;
+  &lt;div id="plot3" class="plot"&gt;
+    &lt;img src="index_files/figure-html/sim_pop-1.png" width="1200px" height="380px" style="display: block; margin: auto;" /&gt;
+  &lt;/div&gt;
+  &lt;div id="plot4" class="plot" style="display: none;"&gt;
+    &lt;img src="index_files/figure-html/sim_IIV-1.png" width="1200px" height="380px" style="display: block; margin: auto;" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+document.getElementById("plot-selector-2").addEventListener("change", function() {
+  var selectedPlot = this.value;
+  var plots = document.querySelectorAll("#plot-container-2 .plot");
+  plots.forEach(function(plot) {
+    plot.style.display = "none";
+  });
+  document.getElementById(selectedPlot).style.display = "block";
+});
+
+// Ensure the correct plot is displayed on load for Tab 2
+window.onload = function() {
+  var selectedPlot = document.getElementById("plot-selector-2").value;
+  document.getElementById(selectedPlot).style.display = "block";
+};
+&lt;/script&gt;
+
+
+]
+
+
+
+.panel[.panel-name[Results &amp; Recommendations]
+
+
+&gt; For patients on a 20-mg dose, we recommend half of the original dose. In patients taking 40 mg or more, a quarter of the dose should be taken until 2 days after discontinuation of nirmatrelvir/ritonavir.
+
+&gt; Ritonavir modulated this absorption process with prolonged **absorption time** (factor 1.71) and increased relative **bioavailability** (factor 1/0.57 = 1.75), while no additional effect on elimination was detected.
+
+&gt; Open question on mode of action, no mechanistic explanation, but a pragmatic model that fits its purpose.
+
+
+
+]
+
+]
+
+
+
+ 
+---
+class: body-yellow
+background-image: url(img/background02.PNG)
+
+# Use-Case 2: &lt;br /&gt; Translational PKPD / QSP &lt;br /&gt; model for the  &lt;br /&gt; preclinical-to-clinical &lt;br /&gt; of ADCs
+
+
+---
+
+# Flowchart of T-DM1 Case-Study [12]
+
+![:scale 95%](img/Singh.png) 
+&lt;br /&gt;
+.footnote[[12] _Singh AP &amp; Shah DK. AAPS J 2017;19:1054-1070._] 
+
+&lt;!--AAPSJ17_19_1054_Singh_28374319 --&gt;
+---
+
+# Translational pipeline ... 
+
 
 
 
 
 .panelset[
-.panel[.panel-name[Auktoriale Sicht]
+.panel[.panel-name[Cellular level]
 
 
+&lt;select id="plot-selector-3" style="margin-top: 20px;"&gt;
+  &lt;option value="plot5" selected&gt;Antibody trafficking&lt;/option&gt;
+  &lt;option value="plot6"&gt;Payload distribution&lt;/option&gt;
+  &lt;option value="plot7"&gt;Cell viability&lt;/option&gt;
+&lt;/select&gt;
+&lt;div id="plot-container-3"&gt;
+  &lt;div id="plot5" class="plot"&gt;
+  
+  
+  ![:scale 95%](img/Austin_plot_long.png) 
+
+  &lt;/div&gt;
+  &lt;div id="plot6" class="plot" style="display: none;"&gt;
+ 
+![:scale 95%](img/Erickson_cell_plot.png) 
+ 
+  &lt;/div&gt;
+  &lt;div id="plot7" class="plot" style="display: none;"&gt;
+ 
+![:scale 95%](img/viability_plot.png) 
+   
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+document.getElementById("plot-selector-3").addEventListener("change", function() {
+  var selectedPlot = this.value;
+  var plots = document.querySelectorAll("#plot-container-3 .plot");
+  plots.forEach(function(plot) {
+    plot.style.display = "none";
+  });
+  document.getElementById(selectedPlot).style.display = "block";
+});
+
+// Ensure the correct plot is displayed on load for Tab 2
+window.onload = function() {
+  var selectedPlot = document.getElementById("plot-selector-3").value;
+  document.getElementById(selectedPlot).style.display = "block";
+};
+&lt;/script&gt;
+
+]
+
+.panel[.panel-name[In vivo level]
+
+![:scale 95%](img/invivo_plot2.png) 
+
+]
+
+
+.panel[.panel-name[Clinical level]
+
+![:scale 95%](img/Clinical_plot.png) 
+
+]
+
+.panel[.panel-name[Validation]
+
+A **Shiny App** to
+- validate with clinical **Trastuzumab deruxtecan** individual-patient data (Phase-2 RCT)
+  + PK for mAb and payload
+  + Tumor size
+
+- validate with another substance in clinical development (different mode of action)
 
 
 ]
 
-.panel[.panel-name[Forscher-Sicht]
+.panel[.panel-name[Application]
 
-
-
-]
-
-
+![:scale 75%](img/platform_application.png) 
 
 ]
 
-
+]
 
 
 
 
 ---
 class: body-yellow
-background-image: url(img/background06.png)
+background-image: url(img/DrugSymposium_Background.png)
 
-## AusblicK &amp; &lt;br /&gt; Diskussion 
+## Future perspective: &lt;br /&gt;  &lt;br /&gt; challenges and &lt;br /&gt; envisioned solutions
+
+
+---
+exclude:true
+# Matrix aus MID3 meeting
+
+![:scale 95%](img/Marshall.PNG)
+
+
+---
+exclude:true
+# Enablers and disablers
+
+![:scale 100%](img/Marshall2.PNG)
+Marshall S et al. CPT Pharmacometrics Syst Pharmacol 2019;8:87-96.
+
+
+
+---
+
+# Challenges for successful MIDD (oncology, CNS, ...)
+
+
+
+.panelset[
+.panel[.panel-name[Clinical aspects]
+
+- **heterogeneity of disease** (high variations in patient response and safety profiles) &lt;!-- [Nature13_501_328_Meacham_24048065] --&gt;
+  + time-dependent variations in response to treatments and (tumor) progression [13], &lt;!-- [Nature13_501_328_Meacham_24048065] --&gt;
+  + complex interaction of different targets (for CNS, also involvement of comorbidities) [14]
+  
+- lack of (quantitative and) validated **biomarkers** &lt;!-- unlike PD marker gamma-H2AX for T-Dxd-induced double-strand breaks or cell-free tumor (ct)-DNA or circulating tumor cells --&gt;
+
+- **translational barriers** from animal systems to humans (xenograft sensitivity, behavioral models) [14,15]
+
+]
+
+.panel[.panel-name[Modeling aspects]
+- capture **target concentrations** (target accessibility)
+
+- **spatio-temporal** relationships  &lt;!-- PDEs, agent-based --&gt;
+
+  &lt;!--+ Zhou J, Li Q, Cao Y. Spatiotemporal heterogeneity across metastases and organ-specific response informs drug efficacy and patient survival in colorectal cancer. Cancer Res. 2021;81:2522-2533. 
+  + Zhou J, Cipriani A, Liu Y, Fang G, Li Q, Cao Y. Mapping lesion-specific response and progression dynamics and inter-organ variability in metastatic colorectal cancer. Nat Commun. 2023;14:417.--&gt;
+- time-variant changes in model parameters (e.g., time-dependent clearance [16])
+
+- dose finding/optimization as a **multidimensional problem** for the individual (type of disease, line of treatment, biomarker profile), combination therapies, dose schedules, ...
+
+]
+
+
+.panel[.panel-name[Trial design aspects ]
+
+- (too) short **observation periods**
+
+- choice of endpoints
+
+- MTD paradigm ("more is better" dogma [13]) &lt;!-- (e.g., no E-R correlation between ORR and AUC of sacituzumab govitecan elements [13]) --&gt;
+
+]
+
+
+]
+
+.footnote[[13] _Qi T et al. Pharm Res 2022;39:3259-3265._  &lt;br /&gt;  [14] _Geerts H et al. CPT Pharmacometrics Syst Pharmacol 2020;9:5-20._ &lt;br /&gt;  [15] _Nessler I et al. Trends Pharmacol Sci 2021;42:803-812._ &lt;br /&gt;  [16] _Proctor JR &amp; Wong H. Clin Transl Sci 2024;17:e13676._] 
+
+
+---
+
+# Solutions from the MIDD toolbox?
+
+.left-code[
+### Tools
+
+
+- &lt;font color='black'&gt; Empirical PK/PD &lt;/font&gt;
+
+- &lt;font color='green'&gt; Empirical D/E-R &lt;/font&gt;
+
+- &lt;font color='blue'&gt; semi-mechanistic PK/PD &lt;/font&gt;
+
+- &lt;font color='orange'&gt; PBPK &lt;/font&gt;
+
+- &lt;font color='red'&gt;QSP &lt;/font&gt;
+
+
+]
+
+
+
+
+
+&lt;style&gt;
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+&lt;/style&gt;
+
+
+&lt;!-- 
+
+  
+
+--&gt;
+
+
+.center2[
+&lt;img src="index_files/figure-html/toolbox_PKPD-1.png" width="500px" height="450px" style="display: block; margin: auto;" /&gt;
+]
+--
+.center2[
+&lt;img src="index_files/figure-html/toolbox_DER-1.png" width="500px" height="450px" style="display: block; margin: auto;" /&gt;
+]
+--
+.center2[
+&lt;img src="index_files/figure-html/toolbox_semi-1.png" width="500px" height="450px" style="display: block; margin: auto;" /&gt;
+]
+--
+.center2[
+&lt;img src="index_files/figure-html/toolbox_PBPK-1.png" width="500px" height="450px" style="display: block; margin: auto;" /&gt;
+]
+--
+.center2[
+&lt;img src="index_files/figure-html/toolbox_QSP-1.png" width="500px" height="450px" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+---
+# Which approach to choose?
+
+&lt;!-- 
+"QSP models vs. simple models"
+"fit-for-purpose vs. platform" Curcurull-Sanchez
+
+Broadly speaking, empirical pharmacometrics models are considered ‘fit-for-purpose’, whilst QSP models are deemed ‘complex’. In reality, there are multiple degrees of complexity and granularity within each type of approach, leading to concepts like mechanistic empirical models, minimal PBPK models, and more recently platform QSP models.
+
+--&gt;
+
+
+&gt; _"It all depends on the question and that the modeling approach (i.e., PMx or QSP) should be chosen based on the available data, stage of drug development, and answer required"_[17] 
+
+
+&lt;br /&gt;
+And perhaps it is less a question of “either - or”, but rather a combination that can be sufficiently complex, but still fit-for-purpose
+ 
+
+--
+# See following examples for their flexible application the last decade
+  
+.footnote[[17] _van der Graaf PH. CPT Pharmacometrics Syst Pharmacol 2019;8:331-332._ ] 
+
+
+---
+# Integrating PMx and QSP
+
+NATPARA(R) integrative modeling : 
++ **QSP** model: Physiological description of bone mineral homeostasis and, simultaneously, the inter-related effects on calcium, phosphate, parathyroid hormone, vitamin D, and bone formation (bone mineral density, BMD) [18]. 
++ **PMx** model: PK/PD for a parathyroid hormone analogue (NATPARA(R), PTH), among others. 
+
+Importance for MIDD: 
++ **Real-world safety** data as stimulus 
++ **Regulatory acceptance**: used to (re-) assess the adequacy of the dosage regimen during FDA regulatory review [19]
++ Good example for **"model-repurposing"** [20] and usage of **platform models** providing a 'framework' that interlinks biological processes, biomarkers, and clinical endpoints in a specific disease indication [5, 21]
+
+
+.footnote[[18] _Peterson MC &amp; Riggs MM. Bone 2010;46:49-63._  &lt;br /&gt;  [19] _Peterson MC &amp; Riggs MM.CPT Pharmacometrics Syst Pharmacol 2015;4:e00020._ &lt;br /&gt;   [20] _Cucurull-Sanchez L et al. CPT Pharmacometrics Syst Pharmacol 2019;8:259-272._  &lt;br /&gt;  [21] _Scheuher B et al. J Pharmacokinet Pharmacodyn 2023._ ] 
+
+
+---
+
+# "Marry classical PMx and QSP with RWD, PhEpi, and AI" [4]
+
+- AI
+  + **model selection** assisted by machine learning [22] &lt;!-- monolix, maybe also applicable for model reduction --&gt;
+  + statistical learning to support the identification of (predictive [23]) **biomarkers** from high-dimensional data (e.g., genome signatures [24], metabolomics [25], fMRI...)
+ &lt;!-- Genome signatures for substance use disorders, Metabolomics of dopamin agonist treatment, or any quantitative information that can be derived from fMRI or others --&gt;
+    
+- Patient-reported outcomes (**PROs**)
+  + PROs in dose-finding clinical trials [26]? &lt;!-- Challenging as the AE profile may not be fully understood and the target population may not be defined --&gt;
+  + PROs in phase II and phase III trials could guide dose optimization and development of a therapeutic drug monitoring in the postmarket setting [27].
+  + PROs in post-marketing (see also wearable-detected motions for Parkinson [28]) &lt;!-- mPower study --&gt;
+
+&lt;!-- .footnote[[4] _Lesko LJ. Perspective on model-informed drug development. CPT Pharmacometrics Syst Pharmacol 2021;10:1127-1129._ ] --&gt;
+
+.footnote[[22] _Sibieude E et al. J Pharmacokinet Pharmacodyn 2022;49:257-270._  &lt;br /&gt;  [23] _Meid AD et al. CPT Pharmacometrics Syst Pharmacol 2022;11:257-261._ &lt;br /&gt;  [24] _Baurley JW et al. Trends Mol Med 2018;24:221-235._ &lt;br /&gt;  [25] _van den Brink WJ et al. CPT Pharmacometrics Syst Pharmacol 2019;8:107-117._ &lt;br /&gt;  [26] _Lee SM et al. Stat Med. 2020;39: 310-325._ &lt;br /&gt;  [27] _Minasian L et al. Clin Pharmacol Ther 2014;96:572-9._ &lt;br /&gt;  [28] _Doerr M et al. JMIR Mhealth Uhealth 2017;5:e14._] 
+
+
+---
+# Alternative endpoints / definitions
+
+- **Questionnaire-derived endpoints** to shorten clinical trials and demonstrate efficacy (e.g., Item Response Theory Method) [29]
+
+- Linking QSP models to **clinical endpoints**: e.g., hyperkalemia in trials [30].
+
+- **Multi-state models**: holistically link all information from common endpoints such as overall response, progression-free survival, and overall survival that are usually estimated separately, leading to the loss of relevant information on time to response, duration of response, and time to progression [31] &lt;!-- HER2-negative breast cancer patients treated with docetaxel --&gt;
+
+- **interim PopPK-PD analyses** within an adaptive design framework: ORR, PK, and PD modeling of erdafitinib dosing regimens [32]
+
+&lt;!-- enable the real-time or interim analysis of PK, PD biomarkers, and safety data, allowing for the identification of arms with suboptimal dosages for elimination or arms exhibiting favorable efficacy and safety profiles to be supplemented. These trials can incorporate stopping rules based on efficacy, safety, or a combination of both. A notable illustration is presented by study BLC2001, a multicenter, open-label investigation assessing various dosing regimens of erdafitinib in patients with metastatic or surgically unresectable urothelial cancer.[BALVERSA (erdafitinib) Drug Approval Package. 2019 https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/212018Orig1s000TOC.cfm] The primary objective involved evaluating the overall response rate (ORR) of the selected dosing regimens within a randomized and adaptive design framework. Several prespecified interim analyses were based on ORR, PK, and PD modeling, providing support for discontinuing an inferior dosage arm (10 mg once daily 7 days on/7 days off, with a potential dose increase to 12 mg once daily 7 days on/7 days off beginning in cycle 2). Subsequent PK/PD analysis and clinical data revealed an alternative dosing regimen (8 mg once daily, with a dose increase to 9 mg once daily if serum PO4 level is &lt;5.5 mg/dL) that could optimize the number of patients with serum PO4 levels within the desired range while minimizing treatment interruptions and dose reductions. This alternative dosing regimen was introduced through a protocol amendment and subsequently expanded in subsequent studies, ultimately becoming the approved dosage. --&gt;
+
+.footnote[[29] _Younis IR et al. JAMA Psychiatry 2020;77:1064-1071_  &lt;br /&gt;  [30] _Saito R et al. Drug Metab Pharmacokinet 2024;56:101019_ &lt;br /&gt;  [31] _Krishnan SM, et al. CPT Pharmacometrics Syst Pharmacol 2021;10:1255-1266._ &lt;br /&gt;  [32] .link-style2[[BALVERSA (erdafitinib) FDA Drug Approval Package. 2019 ](https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/212018Orig1s000TOC.cfm)]] 
+
+
+---
+
+# Combination treatments 
+
+- **QSP**-platform-driven: e.g., appropriateness of HER2-targeting combinations (and sequences) [33]
+
+- **Integration** of empirical models to support dosing recommendations and clinical trial design [34]: combination of third-generation EGFR inhibitor osimertinib with pan-HER inhibitor dacomitinib with a
+  + tumor **clonal prevalence model** (developed from cell viability assessments of partially (in)sensitive cells)
+  + **popPK models** to simulate drug concentrations and thus to predict the proliferation rates
+  + **toxicity constraints** from previous trials to restrict the potential dose range
+  + recommended regimen clinically assessed in actual phase I trial (NCT03810807)
+  
+- **Virtual populations** / digital twins to address population heterogeneity [35] &lt;!-- Immuno-Oncology  --&gt;
+  &lt;!-- + minimal (lumped) mechanistic model to describe tumor-immune interactions in (melanoma) target lesions
+  + virtual patients with multiple target lesions to be assessed in a virtual population --&gt; &lt;!-- variability informed by previous work  --&gt;
+  
+&lt;!--  A promising example in this space is the work of Poels et al., that used a tumor clonal prevalence model parameterized using in vitro dose–response data in addition to incorporating tumor heterogeneity and intersubject PK variability to predict tumor evolution under different dosing schedules of already approved osimertinib and dacomitinib.59 This model was validated using cell line data and used to identify an optimal combination dosing schedule used to support the design for a dose-escalation phase I clinical trial in patients with advanced EGFR mutant lung cancer for study NCT03810807. 
+Continued innovation in QSP virtual trial simulation strategies, as well as more recent efforts using new QSP digital twins workflows has enabled systematic exploration and mapping of biological heterogeneity onto treatment response heterogeneity.55,55,60–65  --&gt;
+
+&lt;!-- It is important to emphasize that a detailed representation of how immune system is modulated by IO therapies is beyond the scope of this work. Such a “bottom up” model, with multiple biological uncertainties and lack of quantitation of aspects of tumor-immune interactions, can be used to identify gaps in knowledge and guide further biological investigations. Here, we implement a “top down” model with the purpose to describe clinical efficacy data using a minimal (and lumped) description of underlying biological mechanisms. --&gt;
+
+
+.footnote[[33] _Zhou YT et al. Acta Pharmacol Sin 2024_  &lt;br /&gt;  [34] _Poels KE et al. Nat Commun 2021;12:3697._  &lt;br /&gt;  [35] _Kumar R et al. CPT Pharmacometrics Syst Pharmacol 2021;10:684-695._ ] 
+
+
+---
+# Pharmacology at the site of action
+
+- PBPK-prediction of pembrolizumab **target occupancy** [36]
+ 
+- PBPK-predicted **CNS-distribution** to inform treatment of breast cancer brain metastases [37] or of brain cancers with CDK4/6 inhibitors [38]
+
+&lt;!-- the saturation of cetuximab clearance, as inferred from PK modeling, was used to estimate target engagement.79 --&gt;
+
+- Modeling **spatio-temporal dynamics** for intratumoral ADC distribution [39]
+
+&lt;!-- In Kiruac et al., a QSP model linking cell surface receptor (EGFR) activation, the MAPK signaling pathway, and tumor growth of BRAV600 melanoma was converted to BRAV600 CRC through calibration with in vitro (cell line), in vivo (celland patient-derived xenograft) studies, tumor response data from three phase I clinical trials testing combinations of EGFR, BRAF, and MEK inhibitors.58 The model was used to accurately predict phase I clinical response for a new ERK inhibitor and prospective simulations were then used to evaluate potential drug combinations and predictive biomarkers for increasing responsiveness to MEK/ERK inhibitors in the relevant patients with colorectal cancer (CRC) population.
+ --&gt;
+
+.footnote[[36] _Ratain MJ et al. Clin Pharmacol Ther. 2022;111:993_  &lt;br /&gt;  [37] _Li J et al. Clin Cancer Res. 2022;28:3329-3341._  &lt;br /&gt;  [38] _Li  et al. Clin Pharmacol Ther. 2021;109:494-506._ &lt;br /&gt;  [39] _Cilliers C et al. AAPS J 2016;18:1117-1130._ ] 
+
+
+
+
+---
+class: body-yellow
+background-image: url(img/background06.PNG)
+
+## Outlook &amp; &lt;br /&gt; Discussion 
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
